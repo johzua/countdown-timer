@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100vh;
+   justify-content: center;
+   font-family: 'Montserrat', sans-serif;
+   background:linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(128, 0, 128, 0.3),
+      rgba(128, 0, 128, 0.6)
+    ), 
+     url('./images/futminna gate.jpg') no-repeat center center/cover;
+   color: white;
+   overflow: hidden;
+}
+
+h2 {
+   color: #c300ff;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+   margin-bottom: 20px;
+   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.Year {
+   font-size: 4em;
+   font-weight: bold;
+   margin-bottom: 20px;
+   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.countdown {
+   margin: 30px;
+   background-color: rgba(128, 0, 128, 0.8);
+   padding: 20px;
+   border-radius: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+   position: relative;
+   animation: pulse-purple 5s infinite; 
+}
+
+.countdown div {
+   margin: 0 20px;
+   font-size: 2.5em;
+   font-weight: 500;
+   text-align: center;
+   position: relative;
+   width: 100px;
+   color: 
+   #ffffff; 
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.countdown div::before {
+   content: "";
+   position: absolute;
+   bottom: -20px;
+   left: 0;
+   font-size: 0.5em;
+   line-height: 1.5;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-weight: 500;
+   width: 100%;
+   color: #ffffff;
+}
+
+.countdown #day::before {
+   content: "Days";
+}
+
+.countdown #hour::before {
+   content: "Hours";
+}
+
+.countdown #minute::before {
+   content: "Minutes";
+}
+
+.countdown #second::before {
+   content: "Seconds";
+}
+
+.greeting {
+   font-size: 2em;
+   font-weight: bold;
+   color: #ffd700;
+   text-align: center;
+   margin-bottom: 20px;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+   letter-spacing: 3px;
+   text-transform: uppercase;
+}
+
+
+@keyframes pulse-purple {
+   0% {
+       transform: scale(1);
+       box-shadow: 0 0 20px rgba(128, 0, 128, 0.6);
+   }
+   50% {
+       transform: scale(1.05);
+       box-shadow: 0 0 40px rgba(128, 0, 128, 0.8);
+   }
+   100% {
+       transform: scale(1);
+       box-shadow: 0 0 20px rgba(128, 0, 128, 0.6);
+   }
+}
